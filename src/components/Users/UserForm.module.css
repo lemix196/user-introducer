@@ -1,0 +1,24 @@
+.form-field {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.label {
+  text-align: center;
+  font-size: 18px;
+  color: #ff5722;
+  display: block;
+}
+
+.text-input {
+  background-color: #eeeeee;
+  color: #222831;
+  width: 100%;
+  margin: 10px;
+  padding: 12px;
+  border-radius: 15px;
+  border: none;
+  align: center;
+}
