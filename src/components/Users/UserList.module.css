@@ -1,0 +1,19 @@
+.user-frame {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #2d4059;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+}
+
+.user-frame:hover {
+    background-color: #ff5722
+}
+
+
+.user-frame__text {
+    font-size: 20px;
+}

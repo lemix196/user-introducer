@@ -21,9 +21,17 @@ const UserForm = (props) => {
 
   const submitFormHandler = (event) => {
     event.preventDefault();
-    console.log(enteredName);
-    console.log(enteredAge);
-  };
+
+    const userData = {
+        userName: enteredName,
+        userAge: enteredAge
+    }
+
+    props.onSaveUserData(userData);
+
+    setEnteredName('');
+    setEnteredAge('');
+};
 
   return (
     <form onSubmit={submitFormHandler}>
