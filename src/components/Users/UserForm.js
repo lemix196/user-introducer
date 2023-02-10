@@ -17,6 +17,7 @@ const UserForm = (props) => {
         <label className={styles.label}>Age (years)</label>
         <input className={styles['text-input']} type="text"></input>
       </div>
+      <button className={styles.button} type="submit">Add User</button>
     </form>
   );
 };
