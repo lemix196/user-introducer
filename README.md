@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# User introducer - React.js single page app
+<p style='text-align:justify'>My first application coded in <b>React.js + CSS Modules</b>, completly by myself. It allows to pass Username and his/hers Age through <b>UserForm</b> and create <b>UserList</b>.</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Passing data to UserForm
+<img src="https://www.linkpicture.com/q/user-introducer1.jpg" width=300 height= 330>
+<img src="https://www.linkpicture.com/q/user-introducer2.jpg" width=300 height= 330>
 
-## Available Scripts
+<br />
+<p style='text-align:justify'>After typing in the form data clicking on Add user button (or by pressing Enter) the form data is passed to UserList component (the one with "No users added" heading) and updated. The header changes to "Users list:" and first user name with his age is added to the list. Also the form fields are cleared and ready to add next user:</p>
+<br />
+<img src="https://www.linkpicture.com/q/user-introducer3.jpg" align="middle" width=300 height= 400>
 
-In the project directory, you can run:
+# Form data validation
+<p style='text-align:justify'>Both fields have implemented two simple validators:
+</p>
 
-### `npm start`
+1) Username validator **does not allow to provide empty name** - when empty name is passed modal window pops-up:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<img align="middle" src="https://www.linkpicture.com/q/user-introducer4.jpg"  width=520 height= 360>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<br />
 
-### `npm test`
+2) Age validator **does not allow to pass empty field and values below 1**:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img align="middle" src="https://www.linkpicture.com/q/user-introducer5.jpg" width=520 height= 360>
 
-### `npm run build`
+# Summary
+That small app uses whole basics of React.js module and was a decent test of the React knowledge I gained hitherto. It also helped me to rust away my CSS skills and create maybe not so artistic, yet eye friendly UI.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<img align="middle" src="https://www.linkpicture.com/q/user-introducer6.jpg" width=320 height= 400>
