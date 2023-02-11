@@ -3,3 +3,14 @@
   background-color: #2d4059;
   background-clip: border-box;
 }
+
+.h2 {
+  text-align: left;
+  margin: 0% auto;
+  padding: 10px;
+  color: #eeeeee;
+  background-color: #222831;
+  font-size: 28px;
+  font-family: "Trebuchet MS", sans-serif;
+  border-radius: 20px 20px 0px 0px;
+}

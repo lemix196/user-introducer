@@ -11,11 +11,12 @@ function App() {
   const [users, setUsers] = useState([]);
   const [isModalHidden, setModalHidden] = useState(true);
   const [modalMessage, setModalMessage] = useState("");
+  const [isUsersEmpty, setIsUsersEmpty] = useState(true);
 
   const addUserHandler = (newUser) => {
     // Give the new user his "unique" ID
     newUser = { id: Math.random().toString(), ...newUser };
-
+    setIsUsersEmpty(false);
     setUsers((existingUsers) => {
       return [newUser, ...existingUsers];
     });
@@ -39,6 +40,7 @@ function App() {
       </Card>
 
       <Card>
+        {isUsersEmpty ? <h2 className={styles.h2}>No users added.</h2> : <h2 className={styles.h2}>Users list:</h2>}
         {users.map((user) => (
           <UserList userData={user} />
         ))}
