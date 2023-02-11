@@ -22,16 +22,24 @@ const UserForm = (props) => {
   const submitFormHandler = (event) => {
     event.preventDefault();
 
-    const userData = {
-        userName: enteredName,
-        userAge: enteredAge
+    if (enteredName.trim().length === 0) {
+      props.showModal("Please enter a valid name and age (non-empty values).");
+      return null;
+    } else if (enteredAge < 1) {
+      props.showModal("User age must be positive number bigger than 0.");
+      return null;
     }
+
+    const userData = {
+      userName: enteredName,
+      userAge: enteredAge,
+    };
 
     props.onSaveUserData(userData);
 
-    setEnteredName('');
-    setEnteredAge('');
-};
+    setEnteredName("");
+    setEnteredAge("");
+  };
 
   return (
     <form onSubmit={submitFormHandler}>

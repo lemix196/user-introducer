@@ -5,9 +5,12 @@ import styles from "./App.module.css";
 import Card from "./components/UI/Card";
 import UserForm from "./components/Users/UserForm";
 import UserList from "./components/Users/UserList";
+import Modal from "./components/UI/Modal";
 
 function App() {
   const [users, setUsers] = useState([]);
+  const [isModalHidden, setModalHidden] = useState(true);
+  const [modalMessage, setModalMessage] = useState("");
 
   const addUserHandler = (newUser) => {
     // Give the new user his "unique" ID
@@ -18,11 +21,23 @@ function App() {
     });
   };
 
+  const modalHiddenHandler = (message) => {
+    setModalHidden(!isModalHidden);
+    setModalMessage(message);
+  };
+
   return (
     <div className={styles.app}>
+      {!isModalHidden && (
+        <Modal hideModal={modalHiddenHandler} message={modalMessage} />
+      )}
       <Card>
-        <UserForm onSaveUserData={addUserHandler} />
+        <UserForm
+          onSaveUserData={addUserHandler}
+          showModal={modalHiddenHandler}
+        />
       </Card>
+
       <Card>
         {users.map((user) => (
           <UserList userData={user} />
